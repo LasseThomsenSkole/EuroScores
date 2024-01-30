@@ -25,7 +25,7 @@ class StatisticsTest {
     @org.junit.jupiter.api.Test
     void getNumberOfGoals() {
         Map<String, Integer> goalScorersWithTotal = statistics.getGoalScorersWithTotal();
-        int højlundGoals = goalScorersWithTotal.get("Højlund");
+        int højlundGoals = statistics.getNumberOfGoals("Højlund", goalScorersWithTotal);
         assertEquals(7, højlundGoals);
     }
 }
